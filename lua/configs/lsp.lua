@@ -14,7 +14,7 @@ local on_attach = function(_, bufnr)
       desc = 'LSP: ' .. desc
     end
 
-    keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+    KEYMAP.set('n', keys, func, { buffer = bufnr, desc = desc })
   end
 
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
@@ -44,30 +44,29 @@ local on_attach = function(_, bufnr)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
 end
-
 -- Diagnostic icons
 vim.fn.sign_define({
   {
     name = 'DiagnosticSignError',
-    text = '',
+    text = ICONS.error,
     texthl = 'DiagnosticSignError',
     linehl = 'ErrorLine',
   },
   {
     name = 'DiagnosticSignWarn',
-    text = '',
+    text = ICONS.warning,
     texthl = 'DiagnosticSignWarn',
     linehl = 'WarningLine',
   },
   {
     name = 'DiagnosticSignInfo',
-    text = '',
+    text = ICONS.info,
     texthl = 'DiagnosticSignInfo',
     linehl = 'InfoLine',
   },
   {
     name = 'DiagnosticSignHint',
-    text = '',
+    text = ICONS.hint,
     texthl = 'DiagnosticSignHint',
     linehl = 'HintLine',
   },

@@ -1,2 +1,9 @@
-opt = vim.opt
-keymap = vim.keymap
+OPT = vim.opt
+KEYMAP = vim.keymap
+
+ICONS = {
+  hint = '',
+  info = '',
+  warning = '',
+  error = '',
+}

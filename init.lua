@@ -67,6 +67,9 @@ require('lazy').setup({
 
   -- Debugging
   require('plugins.dap'),
+
+  -- Tree view
+  require('plugins.tree'),
 }, {})
 
 require('base')
@@ -77,3 +80,4 @@ require('configs.treesitter')
 require('configs.which-key')
 require('configs.lsp')
 require('configs.cmp')
+require('configs.tree')

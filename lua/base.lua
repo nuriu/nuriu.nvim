@@ -1,55 +1,52 @@
-require("globals")
+require('globals')
 
 -- [[ Setting options ]]
 
 -- Set highlight on search
-opt.hlsearch = true
-opt.incsearch = true
+OPT.hlsearch = true
+OPT.incsearch = true
 
 -- Make relative line numbers default
-opt.number = true
-opt.relativenumber = true
+OPT.number = true
+OPT.relativenumber = true
 
 -- Enable mouse mode
-opt.mouse:append 'a'
+OPT.mouse:append('a')
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-opt.clipboard:append 'unnamedplus'
+OPT.clipboard:append('unnamedplus')
 
 -- Enable break indent
-opt.breakindent = true
-
--- Save undo history
-opt.undofile = true
+OPT.breakindent = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
-opt.ignorecase = true
-opt.smartcase = true
+OPT.ignorecase = true
+OPT.smartcase = true
 
 -- Keep signcolumn on by default
-opt.signcolumn = 'yes'
+OPT.signcolumn = 'yes'
 
 -- Decrease update time
-opt.updatetime = 250
-opt.timeoutlen = 300
+OPT.updatetime = 250
+OPT.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
-opt.completeopt = 'menuone,noselect'
+OPT.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
-opt.termguicolors = true
+OPT.termguicolors = true
 
 -- Highlight line that cursor is at
-opt.cursorline = true
+OPT.cursorline = true
 
 -- Set minimum lines to show
-opt.scrolloff = 10
-opt.sidescrolloff = 10
+OPT.scrolloff = 10
+OPT.sidescrolloff = 10
 
 -- Don't use swap file
-opt.swapfile = false
+OPT.swapfile = false
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
