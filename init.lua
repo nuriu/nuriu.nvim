@@ -42,7 +42,7 @@ require('lazy').setup({
   require('plugins.gitsigns'),
 
   -- Theme
-  require('themes.onedark'),
+  require('plugins.themes.onedark'),
 
   -- Set lualine as statusline
   require('plugins.lualine'),
@@ -71,7 +71,7 @@ require('lazy').setup({
 
 require('base')
 require('keymap')
-
+require('configs.themes.onedark')
 require('configs.telescope')
 require('configs.treesitter')
 require('configs.which-key')
