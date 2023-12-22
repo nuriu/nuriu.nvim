@@ -79,9 +79,14 @@ require('mason').setup()
 require('mason-lspconfig').setup()
 require('mason-tool-installer').setup({
   ensure_installed = {
+    'vim-language-server',
     'stylua',
     'eslint_d',
     'prettierd',
+    'gofumpt',
+    'golines',
+    'gomodifytags',
+    'gotests',
   },
 })
 
@@ -95,7 +100,7 @@ require('mason-tool-installer').setup({
 --  define the property 'filetypes' to the map in question.
 local servers = {
   clangd = {},
-  csharp_ls = {},
+  omnisharp = {},
   rust_analyzer = {},
   gopls = {},
   pyright = {},
