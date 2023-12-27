@@ -70,6 +70,9 @@ require('lazy').setup({
 
   -- Tree view
   require('plugins.tree'),
+
+  -- Move line / block
+  require('plugins.move'),
 }, {})
 
 require('base')
