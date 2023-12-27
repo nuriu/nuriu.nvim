@@ -73,6 +73,9 @@ require('lazy').setup({
 
   -- Move line / block
   require('plugins.move'),
+
+  -- Toggle terminal
+  require('plugins.toggleterm'),
 }, {})
 
 require('base')
