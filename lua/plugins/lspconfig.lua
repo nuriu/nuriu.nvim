@@ -37,6 +37,7 @@ return {
         'vim-language-server',
         'stylua',
         'lua_ls',
+        'omnisharp'
       },
     })
 
@@ -48,6 +49,7 @@ return {
 
     local lspconfig = require('lspconfig')
 
+    -- [[ SERVERS ]]
     -- lua
     lspconfig.lua_ls.setup({
       capabilities = capabilities,
@@ -61,6 +63,10 @@ return {
           },
         },
       },
+    })
+
+    lspconfig.omnisharp.setup({
+      capabilities = capabilities,
     })
 
     -- Lspsaga
