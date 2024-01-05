@@ -9,4 +9,13 @@ return {
       section_separators = '',
     },
   },
+  config = function()
+    require('lualine').setup {
+      sections = {
+        lualine_a = { 'mode' },
+        lualine_c = { { 'filename', path = 3 } },
+        lualine_d = { 'diagnostics' },
+      },
+    }
+  end,
 }
