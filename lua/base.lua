@@ -58,31 +58,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
-
--- [[ Diagnostic icons ]]
-vim.fn.sign_define({
-  {
-    name = 'DiagnosticSignError',
-    text = ICONS.error,
-    texthl = 'DiagnosticSignError',
-    linehl = 'ErrorLine',
-  },
-  {
-    name = 'DiagnosticSignWarn',
-    text = ICONS.warning,
-    texthl = 'DiagnosticSignWarn',
-    linehl = 'WarningLine',
-  },
-  {
-    name = 'DiagnosticSignInfo',
-    text = ICONS.info,
-    texthl = 'DiagnosticSignInfo',
-    linehl = 'InfoLine',
-  },
-  {
-    name = 'DiagnosticSignHint',
-    text = ICONS.hint,
-    texthl = 'DiagnosticSignHint',
-    linehl = 'HintLine',
-  },
-})

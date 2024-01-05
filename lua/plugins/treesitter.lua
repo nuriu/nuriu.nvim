@@ -23,6 +23,8 @@ return {
           'vimdoc',
           'vim',
           'bash',
+          'markdown',
+          'markdown_inline',
         },
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
@@ -85,5 +87,5 @@ return {
         },
       })
     end, 0)
-  end
+  end,
 }

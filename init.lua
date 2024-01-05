@@ -43,15 +43,19 @@ require('lazy').setup({
 
   -- Theme
   require('plugins.themes.onedark'),
+  -- require('plugins.themes.gruvbox'),
 
   -- Set lualine as statusline
   require('plugins.lualine'),
+
+  -- Cursor line
+  require('plugins.cursorline'),
 
   -- Add indentation guides even on blank lines
   require('plugins.indent-blankline'),
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
+  require('plugins.comment'),
 
   -- Fuzzy Finder (files, lsp, etc)
   require('plugins.telescope'),
