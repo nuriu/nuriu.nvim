@@ -14,4 +14,17 @@ return {
     -- Additional lua configuration, makes nvim stuff amazing!
     'folke/neodev.nvim',
   },
+  config = function()
+    local lspconfig = require('lspconfig')
+    -- lua
+    lspconfig.lua_ls.setup {
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { 'vim' },
+          },
+        },
+      },
+    }
+  end
 }

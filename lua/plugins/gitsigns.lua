@@ -1,3 +1,5 @@
+require('globals')
+
 return {
   'lewis6991/gitsigns.nvim',
   opts = {
@@ -15,7 +17,7 @@ return {
       local function map(mode, l, r, opts)
         opts = opts or {}
         opts.buffer = bufnr
-        vim.keymap.set(mode, l, r, opts)
+        KEYMAP.set(mode, l, r, opts)
       end
 
       -- Navigation

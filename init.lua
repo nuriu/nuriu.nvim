@@ -36,7 +36,7 @@ require('lazy').setup({
   require('plugins.cmp'),
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  require('plugins.which-key'),
 
   -- Adds git related signs to the gutter, as well as utilities for managing changes
   require('plugins.gitsigns'),
@@ -80,10 +80,3 @@ require('lazy').setup({
 
 require('base')
 require('keymap')
-require('configs.themes.onedark')
-require('configs.telescope')
-require('configs.treesitter')
-require('configs.which-key')
-require('configs.lsp')
-require('configs.cmp')
-require('configs.tree')
