@@ -44,6 +44,11 @@ require('lazy').setup({
   -- Theme
   require('plugins.themes.onedark'),
   -- require('plugins.themes.gruvbox'),
+  -- require('plugins.themes.kanagawa'),
+  -- require('plugins.themes.nightfox'),
+
+  -- Set bufferline
+  require('plugins.bufferline'),
 
   -- Set lualine as statusline
   require('plugins.lualine'),

@@ -78,7 +78,7 @@ return {
         enable = true,
       },
       outline = {
-        win_width = 80,
+        win_width = 30,
       },
     })
 

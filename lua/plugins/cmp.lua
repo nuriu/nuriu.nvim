@@ -77,7 +77,7 @@ return {
         },
         format = function(entry, vim_item)
           local kind = lspkind.cmp_format({
-            mode = "symbol_text",
+            mode = 'symbol_text',
             maxwidth = 50,
             ellipsis_char = '...',
             before = function(entry, vim_item)
@@ -85,9 +85,9 @@ return {
             end
           })(entry, vim_item)
 
-          local strings = vim.split(kind.kind, "%s", { trimempty = true })
-          kind.kind = " " .. (strings[1] or "") .. " "
-          kind.menu = "    (" .. (strings[2] or "") .. ")"
+          local strings = vim.split(kind.kind, '%s', { trimempty = true })
+          kind.kind = ' ' .. (strings[1] or '') .. ' '
+          kind.menu = '    (' .. (strings[2] or '') .. ')'
 
           return kind
         end,
