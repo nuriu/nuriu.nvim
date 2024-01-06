@@ -11,11 +11,11 @@ return {
     'jay-babu/mason-nvim-dap.nvim',
 
     -- Add your own debuggers here
-    'leoluz/nvim-dap-go',
+    -- 'leoluz/nvim-dap-go',
   },
   config = function()
-    local dap = require 'dap'
-    local dapui = require 'dapui'
+    local dap = require('dap')
+    local dapui = require('dapui')
 
     require('mason-nvim-dap').setup {
       -- Makes a best effort to setup the various debuggers with
@@ -28,7 +28,7 @@ return {
 
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
-        'delve',
+        'netcoredbg'
       },
     }
 
@@ -70,6 +70,23 @@ return {
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
     -- Install golang specific config
-    require('dap-go').setup()
+    -- require('dap-go').setup()
+
+    dap.adapters.coreclr = {
+      type = 'executable',
+      command = 'netcoredbg',
+      args = { '--interpreter=vscode' }
+    }
+
+    dap.configurations.cs = {
+      {
+        type = 'coreclr',
+        name = 'launch - netcoredbg',
+        request = 'launch',
+        program = function()
+          return vim.fn.input('Path to dll: ', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+        end,
+      },
+    }
   end,
 }
