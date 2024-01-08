@@ -16,6 +16,7 @@ KEYMAP.set('n', '<leader>nh', '<cmd>nohl<cr>', { desc = 'Clear search highlights
 -- Select all
 KEYMAP.set('n', '<c-a>', 'ggVG')
 
--- Move between buffers
-KEYMAP.set('n', '<c-n>', '<cmd>bnext<cr>')
-KEYMAP.set('n', '<c-p>', '<cmd>bprevious<cr> ')
+-- Buffer control
+KEYMAP.set('n', '<c-b>n', '<cmd>bnext<cr>', { desc = '[N]ext Buffer' })
+KEYMAP.set('n', '<c-b>p', '<cmd>bprevious<cr>', { desc = '[P]revious Buffer' })
+KEYMAP.set('n', '<c-b>d', '<cmd>bdelete<cr>', { desc = '[D]elete Buffer' })

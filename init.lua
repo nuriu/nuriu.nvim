@@ -29,8 +29,11 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
-  -- lsp
+  -- lsp config
   require('plugins.lspconfig'),
+
+  -- Lspsaga
+  require('plugins.lspsaga'),
 
   -- Autocompletion
   require('plugins.cmp'),
