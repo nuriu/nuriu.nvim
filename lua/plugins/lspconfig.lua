@@ -64,8 +64,10 @@ return {
         'vim-language-server',
         'stylua',
         'lua_ls',
-        'omnisharp',
         'markdownlint',
+        'omnisharp',
+        'clangd',
+        'gopls',
       },
     })
 
@@ -93,6 +95,14 @@ return {
     })
 
     lspconfig.omnisharp.setup({
+      capabilities = capabilities,
+    })
+
+    lspconfig.clangd.setup({
+      capabilities = capabilities,
+    })
+
+    lspconfig.gopls.setup({
       capabilities = capabilities,
     })
   end,
