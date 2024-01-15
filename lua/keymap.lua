@@ -17,7 +17,7 @@ KEYMAP.set('n', '<leader>nh', '<cmd>nohl<cr>', { desc = 'Clear search highlights
 KEYMAP.set('n', '<c-a>', 'ggVG')
 
 -- Buffer control
-KEYMAP.set('n', '<c-b>n', '<cmd>bnext<cr>', { desc = '[N]ext Buffer' })
-KEYMAP.set('n', '<c-b>p', '<cmd>bprevious<cr>', { desc = '[P]revious Buffer' })
+KEYMAP.set('n', '<tab>', '<cmd>bnext<cr>')
+KEYMAP.set('n', '<s-tab>', '<cmd>bprevious<cr>')
 KEYMAP.set('n', '<c-b>d', '<cmd>bdelete<cr>', { desc = '[D]elete Buffer' })
-KEYMAP.set('n', '<c-b>s', '<cmd>w<cr>', { desc = '[S]ave Buffer' })
+KEYMAP.set('n', '<c-s>', '<cmd>w<cr>', { desc = '[S]ave Buffer' })
