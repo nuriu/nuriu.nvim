@@ -58,3 +58,21 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+-- Set shell to PowerShell 7 if on Win32 or Win64
+if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
+  OPT.shell = 'pwsh -NoLogo'
+  OPT.shellcmdflag =
+    '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
+  OPT.shellredir = '-RedirectStandardOutput %s -NoNewWindow -Wait'
+  OPT.shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+  OPT.shellquote = ''
+  OPT.shellxquote = ''
+end
+
+OPT.guicursor = {
+  'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50',
+  'a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor',
+  'sm:block-blinkwait175-blinkoff150-blinkon175',
+}
+
