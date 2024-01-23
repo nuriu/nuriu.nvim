@@ -13,7 +13,7 @@ return {
     'rafamadriz/friendly-snippets',
 
     -- Adds vscode-like pictograms to neovim built-in lsp
-    'onsails/lspkind.nvim'
+    'onsails/lspkind.nvim',
   },
   config = function()
     local cmp = require('cmp')
@@ -25,7 +25,7 @@ return {
     cmp.setup({
       window = {
         completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered()
+        documentation = cmp.config.window.bordered(),
       },
       snippet = {
         expand = function(args)
@@ -82,7 +82,7 @@ return {
             ellipsis_char = '...',
             before = function(entry, vim_item)
               return vim_item
-            end
+            end,
           })(entry, vim_item)
 
           local strings = vim.split(kind.kind, '%s', { trimempty = true })
@@ -91,7 +91,12 @@ return {
 
           return kind
         end,
-      }
+      },
     })
-  end
+
+    -- vscode snippets
+    require('luasnip.loaders.from_vscode').load({
+      paths = { vim.fn.stdpath('config') .. '/snippets' },
+    })
+  end,
 }
