@@ -45,7 +45,8 @@ require('lazy').setup({
   require('plugins.gitsigns'),
 
   -- Theme
-  require('plugins.themes.onedark'),
+  -- require('plugins.themes.onedark'),
+  require('plugins.themes.onedarkpro'),
   -- require('plugins.themes.gruvbox'),
   -- require('plugins.themes.kanagawa'),
   -- require('plugins.themes.nightfox'),
