@@ -1,7 +1,5 @@
 require('globals')
 
--- [[ Setting options ]]
-
 -- Set highlight on search
 OPT.hlsearch = true
 OPT.incsearch = true
@@ -18,7 +16,7 @@ OPT.mouse:append('a')
 --  See `:help 'clipboard'`
 OPT.clipboard:append('unnamedplus')
 
--- Enable break indent
+-- Enable break indent (see https://stackoverflow.com/questions/1204149/smart-wrap-in-vim)
 OPT.breakindent = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
@@ -48,6 +46,24 @@ OPT.sidescrolloff = 10
 -- Don't use swap file
 OPT.swapfile = false
 
+-- Better splitting
+OPT.splitbelow = true
+OPT.splitright = true
+
+-- Enable the sign column to prevent the screen from jumping
+OPT.signcolumn = 'yes'
+
+-- Set fold settings
+-- These options were reccommended by nvim-ufo
+-- See: https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
+OPT.foldcolumn = '0'
+OPT.foldlevel = 99
+OPT.foldlevelstart = 99
+OPT.foldenable = true
+
+-- Place a vertical column
+OPT.colorcolumn = '80,120'
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
@@ -71,8 +87,10 @@ if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
 end
 
 OPT.guicursor = {
-  'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50',
-  'a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor',
-  'sm:block-blinkwait175-blinkoff150-blinkon175',
+  'n-v-c:block', -- Normal, visual, command-line: block cursor
+  'i-ci-ve:ver25', -- Insert, command-line insert, visual-exclude: vertical bar cursor with 25% width
+  'r-cr:hor20', -- Replace, command-line replace: horizontal bar cursor with 20% height
+  'o:hor50', -- Operator-pending: horizontal bar cursor with 50% height
+  'a:blinkwait700-blinkoff400-blinkon250', -- All modes: blinking settings
+  'sm:block-blinkwait175-blinkoff150-blinkon175', -- Showmatch: block cursor with specific blinking settings
 }
-

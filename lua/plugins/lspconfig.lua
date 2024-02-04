@@ -139,6 +139,7 @@ return {
         -- "--header-insertion=never",
         -- "--query-driver=<list-of-white-listed-complers>"
       },
+      filetypes = { 'c', 'cpp', 'objc' },
     })
 
     lspconfig.gopls.setup({

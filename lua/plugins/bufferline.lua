@@ -11,21 +11,21 @@ return {
             filetype = 'NvimTree',
             text = 'Explorer',
             text_align = 'center',
-            separator = true
+            separator = true,
           },
           {
             filetype = 'sagaoutline',
             text = 'Outline',
             text_align = 'center',
-            separator = true
-          }
+            separator = true,
+          },
         },
         get_element_icon = function(element)
           local icon, hl = require('nvim-web-devicons').get_icon_by_filetype(element.filetype, { default = false })
           return icon, hl
         end,
         separator_style = 'slope', -- 'slant' | 'slope' | 'thick' | 'thin'
-      }
+      },
     })
-  end
+  end,
 }
